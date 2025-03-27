@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "ES6", //support optinal chaining ?. ??
+        "module": "ESNext", //import thay vi require
+        "moduleResolution": "node", //resolve node_module
+        "lib": ["esnext", "dom"], //document.querySelector and promise.allSettled()
+        "jsx": "react-jsx",
+        "noEmit": true, //dung webpack thi can
+        "isolatedModules": true, //tree-shaking khi build với Webpack, export default
+        "strict": true,
+        "esModuleInterop": true, //import express from "express";
+        "forceConsistentCasingInFileNames": true, //Tránh lỗi do sai chữ hoa/thường khi import file (đặc biệt trên Linux/macOS).
+        "resolveJsonModule": true,
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "baseUrl": "./",
+        "skipLibCheck": true,
+        "strictPropertyInitialization": true
+    },
+    "include": ["src/**/*", "tests/**/*"],
+    "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}
