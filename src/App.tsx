@@ -1,7 +1,14 @@
-import React from 'react';
-
+import '@/style.css';
+import IMAGE from '@/bg.png';
+import LOGO from '@/react.svg';
 const App = () => {
-    return <h1>App React Typescript webpack</h1>;
+    return (
+        <>
+            <img src={IMAGE} alt='bg' width={1000} height={200} />
+            <img src={LOGO} alt='logo' width={100} height={100} />
+            <h1>App React Typescript webpack</h1>
+        </>
+    );
 };
 
 export default App;
