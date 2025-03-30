@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+@theme {
+    --color-cus-pink: #ffc0cb;
+    --animate-spin-infinity: spin 3s linear infinite;
+}
