@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
@@ -21,11 +22,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader'],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
             },
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset',
+                type: 'asset/resource',
                 parser: {
                     dataUrlCondition: {
                         maxSize: 900 * 1024 // 900KB
@@ -41,10 +42,15 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '..', './build'),
         filename: 'bundle.js',
+        assetModuleFilename: 'images/[hash][ext][query]',
+        clean: true
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', './src/index.html'),
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
         }),
     ],
     stats: 'errors-only',
