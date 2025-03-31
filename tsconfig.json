@@ -12,7 +12,11 @@
         "forceConsistentCasingInFileNames": true, //Tránh lỗi do sai chữ hoa/thường khi import file (đặc biệt trên Linux/macOS).
         "resolveJsonModule": true,
         "skipLibCheck": true,
-        "strictPropertyInitialization": true
+        "strictPropertyInitialization": true,
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"]
+        }
     },
     "include": ["src/**/*.ts", "src/**/*.tsx", "tests/**/*.ts"],
     "exclude": ["node_modules", "dist", "**/*.spec.ts"]

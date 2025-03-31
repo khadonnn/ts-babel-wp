@@ -12,6 +12,7 @@ npm i -D babel-loader
 npm i -D css-loader style-loader
 > split webpack.common.js, prod.js, dev.js, config.js
 npm i -D webpack-merge
+npm install -D @pmmmwh/react-refresh-webpack-plugin react-refresh
 ```
 
 ```
