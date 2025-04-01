@@ -1,10 +1,10 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-module.exports = {
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+export default {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.png', '.svg'],
         alias: {
             '@': path.resolve(__dirname, '..', './src'),
         },
