@@ -19,6 +19,9 @@ npm i -D eslint-plugin-import eslint-plugin-jsx-a11y
 npm i -D globals@latest
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 npm i -D husky@4 lint-staged
+npm i -D @babel/runtime @babel/plugin-transform-runtime
+npm i -D copy-webpack-plugin
+npm i -D webpack-bundle-analyzer
 ```
 
 <!-- npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-eslint-comments eslint-plugin-prettier prettier -->

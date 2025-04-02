@@ -1,6 +1,7 @@
-const webpack = require('webpack')
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-module.exports = {
+import webpack from 'webpack';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+
+const config = {
   mode: 'development',
   devServer: {
     hot: true,
@@ -11,4 +12,6 @@ module.exports = {
     new webpack.DefinePlugin({ 'process.env.name': JSON.stringify('dev') }),
     new ReactRefreshWebpackPlugin(),
   ],
-}
+};
+
+export default config;

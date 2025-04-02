@@ -1,5 +1,5 @@
 import '@/style.css'
-import IMAGE from '@/bg.png'
+import IMAGE from '@/assets/images/bg.png'
 import LOGO from '@/react.svg'
 import Counter from '@/Counter'
 
