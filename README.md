@@ -18,6 +18,7 @@ npm i -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
 npm i -D eslint-plugin-import eslint-plugin-jsx-a11y
 npm i -D globals@latest
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+npm i -D husky@4 lint-staged
 ```
 
 <!-- npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-eslint-comments eslint-plugin-prettier prettier -->

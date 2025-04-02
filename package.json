@@ -1,57 +1,72 @@
 {
-  "name": "ts-wp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "webpack serve --config webpack/webpack.config.js --env env=dev ",
-    "build": "webpack --config webpack/webpack.config.js --env env=prod ",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
-    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.0.17",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.17"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/preset-env": "^7.26.9",
-    "@babel/preset-react": "^7.26.3",
-    "@babel/preset-typescript": "^7.27.0",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.16",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
-    "@typescript-eslint/eslint-plugin": "^8.29.0",
-    "@typescript-eslint/parser": "^8.29.0",
-    "babel-loader": "^10.0.0",
-    "css-loader": "^7.1.2",
-    "eslint": "^9.23.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.5",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "globals": "^16.0.0",
-    "html-webpack-plugin": "^5.6.3",
-    "mini-css-extract-plugin": "^2.9.2",
-    "postcss": "^8.5.3",
-    "postcss-loader": "^8.1.1",
-    "postcss-preset-env": "^10.1.5",
-    "prettier": "^3.5.3",
-    "react-refresh": "^0.17.0",
-    "style-loader": "^4.0.0",
-    "typescript": "^5.8.2",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1",
-    "webpack-merge": "^6.0.1"
-  }
+    "name": "ts-wp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "webpack serve --config webpack/webpack.config.js --env env=dev ",
+        "build": "webpack --config webpack/webpack.config.js --env env=prod ",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+        "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@tailwindcss/postcss": "^4.0.17",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "tailwindcss": "^4.0.17"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.10",
+        "@babel/preset-env": "^7.26.9",
+        "@babel/preset-react": "^7.26.3",
+        "@babel/preset-typescript": "^7.27.0",
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.5.16",
+        "@types/react": "^19.0.12",
+        "@types/react-dom": "^19.0.4",
+        "@typescript-eslint/eslint-plugin": "^8.29.0",
+        "@typescript-eslint/parser": "^8.29.0",
+        "babel-loader": "^10.0.0",
+        "css-loader": "^7.1.2",
+        "eslint": "^9.23.0",
+        "eslint-config-prettier": "^10.1.1",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-prettier": "^5.2.5",
+        "eslint-plugin-react": "^7.37.4",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "globals": "^16.0.0",
+        "html-webpack-plugin": "^5.6.3",
+        "husky": "^4.3.8",
+        "lint-staged": "^15.5.0",
+        "mini-css-extract-plugin": "^2.9.2",
+        "postcss": "^8.5.3",
+        "postcss-loader": "^8.1.1",
+        "postcss-preset-env": "^10.1.5",
+        "prettier": "^3.5.3",
+        "react-refresh": "^0.17.0",
+        "style-loader": "^4.0.0",
+        "typescript": "^5.8.2",
+        "webpack": "^5.98.0",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.1",
+        "webpack-merge": "^6.0.1"
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,json}": [
+            "eslint --fix"
+        ],
+        "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+            "prettier --write"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
 }
